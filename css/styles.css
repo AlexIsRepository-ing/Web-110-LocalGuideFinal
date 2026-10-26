@@ -1,0 +1,42 @@
+html {
+    font-size: 16px;
+}
+
+/* Image */
+img {
+    display: flex;
+    max-width: 100%;
+    max-height: auto;
+}
+
+/* Text */
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+}
+
+/* Navigator Bar */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: green;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
