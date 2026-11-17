@@ -27,6 +27,18 @@ main {
   --CS-beige: #ecf5e2;
   --CS-gold: #d4c04d;
 }
+
+footer {
+  padding: 4rem;
+  background: var(--CS-fern);
+}
+
+/* Hovering all links default */
+
+a:hover {
+  color: var(--CS-gold);
+}
+
 /* Images */
 
 .hero {
@@ -38,6 +50,7 @@ main {
   background-repeat: no-repeat;
   background-blend-mode: lighten;
   background-position: center;
+  text-align: center;
 }
 
 .container {
@@ -103,7 +116,7 @@ h1 {
   justify-content: center;
 
   font-size: 6rem;
-  font-family: "Bebas Neue", serif;
+  font-family: "Bebas Neue", sans-serif;
   padding: 2rem;
   color: #ecf5e2;
 }
@@ -112,7 +125,7 @@ h2 {
   display: flex;
   justify-content: center;
   font-size: 3rem;
-  font-family: "Bebas Neue", serif;
+  font-family: "Bebas Neue", sans-serif;
   background: var(--CS-beige);
   padding: 2rem;
 
@@ -125,6 +138,14 @@ h2 {
   border-right: none;
 
   margin-top: 3rem;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: "Noto Serif", serif;
+  font-weight: 400;
 }
 
 p {
@@ -144,6 +165,8 @@ ul {
   font-family: "Montserrat", sans-serif;
   justify-content: center;
   margin-bottom: 1rem;
+
+  padding-left: 0;
 }
 
 /* Links */
@@ -194,6 +217,8 @@ nav a {
 
   padding-right: 10rem;
   padding-left: 10rem;
+  margin-right: 15%;
+  margin-left: 15%;
 }
 
 .CollegeBox a {
@@ -202,7 +227,7 @@ nav a {
   color: var(--CS-gold);
   padding: 3rem;
   flex: 1;
-  line-height: 1.5rem;
+  line-height: 3rem;
 }
 
 .CollegeBox a:hover {
@@ -226,6 +251,7 @@ nav a {
 
 .Events {
   background-image: url(../images/LeBauerPark.jpg);
+  line-height: 5rem;
 }
 
 .mainEvents {
@@ -265,6 +291,7 @@ nav a {
 }
 
 /* Sports Page */
+
 .sportsSection {
   display: flex;
   flex-direction: column;
@@ -301,23 +328,6 @@ nav a {
   text-align: center;
 }
 
-.Gargoyles a {
-  background-image: url(../images/Hockey.jpg);
-  background-size: cover;
-  border-radius: 1rem;
-  background-color: rgba(65, 63, 60, 0.647);
-  background-blend-mode: darken;
-}
-
-.Grasshoppers a {
-  background-image: url(../images/Baseball.jpg);
-  background-size: cover;
-  border-radius: 1rem;
-  background-color: rgba(170, 164, 160, 0.521);
-  background-blend-mode: darken;
-  font-size: 3rem;
-}
-
 .sport a {
   display: flex;
   font-family: "Bebas Neue";
@@ -333,6 +343,26 @@ nav a {
   text-align: center;
 }
 
+/* Sports banners with links and images */
+
+.Gargoyles a {
+  background-image: url(../images/Hockey.jpg);
+  background-size: cover;
+  border-radius: 1rem;
+  background-color: rgba(65, 63, 60, 0.647);
+  background-blend-mode: darken;
+}
+
+.Grasshoppers a {
+  background-image: url(../images/Baseball.jpg);
+  background-size: cover;
+  border-radius: 1rem;
+  background-color: rgba(170, 164, 160, 0.521);
+  background-blend-mode: darken;
+}
+
+/* Container 3 is for side by side elements */
+
 .container3 {
   display: flex;
   align-items: flex-start;
@@ -341,6 +371,11 @@ nav a {
   gap: 3rem;
   width: 100%;
   max-width: 1200px;
+}
+
+.container3 p {
+  padding: 1rem;
+  margin: 0;
 }
 
 /* Downtown Page */
@@ -362,12 +397,18 @@ nav a {
   font-size: 2rem;
 }
 
+.Restaurants {
+  display: flex;
+  justify-content: center;
+}
+
 /* Media Querries */
 
 @media screen and (max-width: 975px) {
   h1 {
     font-size: 5rem;
     padding: 0;
+    text-align: center;
   }
 
   h2 {
@@ -380,6 +421,7 @@ nav a {
     margin: 0, 15%, 0, 15%;
     padding: 0;
     font-size: 1.25rem;
+    line-height: 2rem;
   }
 
   a {
@@ -392,6 +434,25 @@ nav a {
     flex-direction: column;
   }
 
+  .container3 {
+    flex-direction: column;
+    padding-right: 20%;
+    padding-left: 20%;
+    text-align: center;
+  }
+
+  .container3 a {
+    text-align: center;
+    line-height: 3rem;
+    justify-content: space-evenly;
+  }
+
+  .container3 p {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 0;
+  }
+
   .inlineImage {
     width: fit-content;
   }
@@ -402,6 +463,15 @@ nav a {
 
   .CollegeBox a {
     font-size: 3rem;
+  }
+
+  .mainEvents p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0;
+    margin-bottom: 5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
   }
 }
 
@@ -428,6 +498,7 @@ nav a {
     padding: 0;
     margin: 10%;
     font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .CollegeBox {
@@ -435,4 +506,38 @@ nav a {
     padding: 3rem;
   }
   /* Events Page */
+
+  .container3 {
+    justify-content: center;
+    padding-right: 3rem;
+    padding-left: 3rem;
+  }
+
+  .container3 p {
+    line-height: 2rem;
+  }
+
+  .container3 a {
+    text-align: center;
+    justify-content: center;
+    line-height: 3rem;
+  }
+
+  .mainEvents {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .mainEvents p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-right: 20%;
+    padding-left: 20%;
+  }
+
+  .mainEvents a {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+  }
 }
